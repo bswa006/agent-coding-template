@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { 
-  Target, 
- 
-  Users, 
-  Shield, 
-  Code, 
-  Clock,
-  Zap,
-
-  CheckCircle,
+import {
   BarChart3,
-  Rocket,
-  Heart,
-  Star,
-  Trophy
+  CheckCircle,
+  Clock,
+  Code,
+  Shield,
+  Target,
+  Trophy,
+  Users,
+  Zap
 } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import { RevealWrapper } from '../core';
 
 interface AnimatedCounterProps {

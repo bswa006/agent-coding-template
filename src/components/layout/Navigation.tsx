@@ -11,7 +11,6 @@ import {
   Menu,
   X
 } from 'lucide-react';
-import { MagneticWrapper, ScrollIndicator } from '../core';
 
 const Navigation: React.FC = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -30,7 +29,7 @@ const Navigation: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY > 50;
+      const scrolled = window.scrollY > 10;
       setIsScrolled(scrolled);
 
       const sections = navItems.map(item => item.href.substring(1));
@@ -67,121 +66,100 @@ const Navigation: React.FC = () => {
 
   return (
     <>
-      <ScrollIndicator gradient="aurora" height={3} />
+      {/* Progress indicator */}
+      <div className="fixed top-0 left-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 z-50" 
+           style={{ width: `${(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100}%` }} />
       
-      <motion.nav
-        className={`fixed top-0 w-full z-40 transition-all duration-300 ${
+      <nav
+        className={`fixed top-0 w-full z-40 transition-all duration-200 ${
           isScrolled 
-            ? 'bg-white/95 backdrop-blur-md border-b border-[var(--color-border)] shadow-sm' 
-            : 'bg-transparent'
+            ? 'bg-white/80 backdrop-blur-lg border-b border-gray-200' 
+            : 'bg-white/50 backdrop-blur-sm'
         }`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       >
-        <div className="container">
-          <div className="flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <a href="#hero" className="text-lg font-semibold text-gray-900">
+                AI Template
+              </a>
+            </div>
          
-            {/* Desktop Navigation - Fixed Alignment */}
-            <ul className="hidden lg:flex items-center gap-1">
-              {navItems.map((item, index) => (
-                <motion.li
-                  key={item.href}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ 
-                    duration: 0.5, 
-                    delay: index * 0.1,
-                    ease: [0.16, 1, 0.3, 1]
-                  }}
-                >
-                  <MagneticWrapper strength={0.15} distance={40}>
-                    <motion.a
-                      href={item.href}
-                      onClick={(e) => handleClick(e, item.href)}
-                      className={`group relative px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-2 ${
-                        activeSection === item.href.substring(1)
-                          ? 'text-[var(--accent-primary)]'
-                          : 'text-[var(--color-text-muted)] hover:text-[var(--color-text)]'
-                      }`}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      {/* Enhanced Active Indicator */}
-                      {activeSection === item.href.substring(1) && (
-                        <motion.div
-                          className="absolute -inset-y-2 inset-x-0 bg-[var(--color-surface-light)] border border-[var(--accent-primary)] rounded-lg"
-                          layoutId="activeNavItem"
-                          transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
-                        />
-                      )}
-                      
-                      {/* Enhanced Hover Effect */}
-                      {activeSection !== item.href.substring(1) && (
-                        <div className="absolute inset-0 bg-[var(--color-surface-light)] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                      )}
-                      
-                      <span className="relative flex items-center gap-2">
-                        <item.icon className="w-4 h-4" />
-                        <span className="text-sm">{item.label}</span>
-                      </span>
-                    </motion.a>
-                  </MagneticWrapper>
-                </motion.li>
-              ))}
-            </ul>
-
-            {/* Mobile Menu Button */}
-            <motion.button
-              className="lg:hidden p-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] hover:bg-[var(--color-surface-light)] transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </motion.button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.div
-              className="lg:hidden bg-white border-t border-[var(--color-border)]"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <div className="container py-6 space-y-2">
-                {navItems.map((item, index) => (
-                  <motion.a
+            {/* Desktop Navigation */}
+            <div className="hidden lg:block">
+              <div className="flex items-center space-x-1">
+                {navItems.map((item) => (
+                  <a
                     key={item.href}
                     href={item.href}
                     onClick={(e) => handleClick(e, item.href)}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
+                    className={`relative px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
                       activeSection === item.href.substring(1)
-                        ? 'bg-[var(--color-surface-light)] text-[var(--accent-primary)]'
-                        : 'text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-surface-light)]'
+                        ? 'text-gray-900'
+                        : 'text-gray-600 hover:text-gray-900'
                     }`}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ 
-                      duration: 0.3, 
-                      delay: index * 0.05,
-                      ease: [0.16, 1, 0.3, 1]
-                    }}
-                    whileHover={{ x: 10 }}
                   >
-                    <item.icon className="w-4 h-4" />
+                    {activeSection === item.href.substring(1) && (
+                      <motion.div
+                        className="absolute inset-0 bg-gray-100 rounded-md"
+                        layoutId="activeNav"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      />
+                    )}
+                    <span className="relative flex items-center gap-2">
+                      <item.icon className="w-4 h-4" />
+                      {item.label}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+              >
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+              className="lg:hidden bg-white border-t border-gray-200"
+            >
+              <div className="px-2 pt-2 pb-3 space-y-1">
+                {navItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={(e) => handleClick(e, item.href)}
+                    className={`flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                      activeSection === item.href.substring(1)
+                        ? 'bg-gray-100 text-gray-900'
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                    }`}
+                  >
+                    <item.icon className="w-5 h-5" />
                     {item.label}
-                  </motion.a>
+                  </a>
                 ))}
               </div>
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.nav>
+      </nav>
     </>
   );
 };
