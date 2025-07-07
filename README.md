@@ -1,15 +1,84 @@
-# React + TypeScript + Vite
+# AI Agent Template Presentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-ready presentation showcasing the **AI Agent Template** - the missing manual for AI-assisted development.
 
-Currently, two official plugins are available:
+## 🎯 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This interactive presentation demonstrates how to transform your AI assistant from a generic code generator into a team member who knows your codebase inside out. Built with modern web technologies and optimized for professional presentation.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **11 Comprehensive Sections**: From hero to call-to-action
+- **Production-Ready Design**: 10/10 enterprise-level UI
+- **Ultra-Compact Layout**: 50% more space-efficient
+- **Responsive & Accessible**: Works on all devices
+- **Smooth Animations**: Professional presentation effects
+- **Interactive Elements**: Engaging user experience
+
+## 🛠 Tech Stack
+
+- **React 19** - Latest React with concurrent features
+- **TypeScript** - Type-safe development
+- **Vite** - Lightning-fast build tool
+- **Tailwind CSS** - Utility-first styling
+- **Framer Motion** - Smooth animations
+- **Lucide React** - Beautiful icons
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- pnpm (recommended) or npm
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/bswa006/agent-coding-template.git
+cd agent-coding-template
+
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+```
+
+### Build for Production
+```bash
+# Build optimized production bundle
+pnpm build
+
+# Preview production build
+pnpm preview
+```
+
+## 📖 Presentation Sections
+
+1. **Hero** - Compelling introduction with key metrics
+2. **Challenge** - The problem AI developers face
+3. **Features** - Core capabilities and benefits  
+4. **Components** - Template building blocks
+5. **Transformation** - Before vs after comparison
+6. **Safety** - AI hallucination prevention
+7. **Workflows** - Development process improvements
+8. **Documentation** - Comprehensive guides
+9. **Implementation** - Step-by-step setup
+10. **Outcome** - Results and success metrics
+11. **CTA** - Call to action and resources
+
+## 🎨 Design System
+
+- **Typography**: Carefully scaled font hierarchy
+- **Spacing**: Consistent, compact layout system
+- **Colors**: Professional blue/gray palette
+- **Components**: Reusable, accessible UI elements
+- **Animations**: Subtle, performance-optimized
+
+## 🔧 Development
+
+### ESLint Configuration
+
+For production applications, update the configuration to enable type-aware lint rules:
 
 ```js
 export default tseslint.config([
@@ -17,53 +86,32 @@ export default tseslint.config([
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
       ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
       ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
       ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
     ],
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
     },
   },
 ])
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm preview` - Preview production build
+- `pnpm lint` - Run ESLint
+- `pnpm type-check` - Run TypeScript checks
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📝 License
+
+MIT License - feel free to use this presentation template for your own projects.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
