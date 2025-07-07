@@ -238,7 +238,7 @@ const OutcomeSection: React.FC = () => {
 
         {/* Enhanced Benefits Grid */}
         <RevealWrapper>
-                      <div className="mb-10">
+          <div className="mb-10">
             <motion.h3
               className="text-2xl font-bold text-gray-900 text-center mb-12"
               initial={{ opacity: 0, y: 20 }}
@@ -275,51 +275,6 @@ const OutcomeSection: React.FC = () => {
               ))}
             </div>
           </div>
-        </RevealWrapper>
-
-        {/* Enhanced Success Story */}
-        <RevealWrapper>
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 border-4 border-green-300 rounded-xl p-8 md:p-12 text-center shadow-2xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 border border-green-200 rounded-full mb-6">
-                <span className="text-green-700 font-bold text-sm">✨ SUCCESS STORY</span>
-              </div>
-              
-              <div className="flex items-center justify-center gap-3 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
-                  <Star className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  Real Results from Real Teams
-                </h3>
-              </div>
-              
-              <blockquote className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto mb-8 italic font-medium">
-                "After implementing this template, our team went from inconsistent AI suggestions 
-                to production-ready code in minutes. Our junior developers now write senior-level code, 
-                and our seniors focus on architecture instead of code reviews."
-              </blockquote>
-
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-gray-700">
-                <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-lg shadow-md">
-                  <Users className="w-5 h-5 text-blue-600" />
-                  <span className="font-semibold">50+ Development Teams</span>
-                </div>
-                <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-lg shadow-md">
-                  <Rocket className="w-5 h-5 text-green-600" />
-                  <span className="font-semibold">1000+ Projects Shipped</span>
-                </div>
-                <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-lg shadow-md">
-                  <Heart className="w-5 h-5 text-red-500" />
-                  <span className="font-semibold">99% Developer Satisfaction</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </RevealWrapper>
       </div>
     </section>
