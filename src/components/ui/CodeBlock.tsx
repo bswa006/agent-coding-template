@@ -7,9 +7,7 @@ interface CodeBlockProps extends Partial<CodeExample> {
 }
 
 const CodeBlock: React.FC<CodeBlockProps> = ({ 
-  language = 'typescript', 
   code = '', 
-  title,
   dataLabel,
   className = '' 
 }) => {
@@ -25,16 +23,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
     }
   };
 
-  const getLanguageClass = () => {
-    const languageMap: { [key: string]: string } = {
-      typescript: 'language-typescript',
-      javascript: 'language-javascript',
-      python: 'language-python',
-      bash: 'language-bash',
-      json: 'language-json'
-    };
-    return languageMap[language] || 'language-text';
-  };
+
 
   return (
     <div className={`relative ${className}`}>

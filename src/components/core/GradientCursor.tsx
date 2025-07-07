@@ -34,7 +34,7 @@ const GradientCursor: React.FC<GradientCursorProps> = ({
   const [isVisible, setIsVisible] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const trailRef = useRef<CursorTrail[]>([]);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | null>(null);
   const lastMousePos = useRef({ x: 0, y: 0 });
 
   // Motion values for smooth cursor movement
@@ -97,7 +97,7 @@ const GradientCursor: React.FC<GradientCursorProps> = ({
       const decayTime = 300; // 300ms trail decay
       
       trailRef.current = trailRef.current
-        .map((point, index) => ({
+        .map((point) => ({
           ...point,
           opacity: Math.max(0, 1 - (currentTime - point.timestamp) / decayTime),
           size: point.size * (0.5 + (point.opacity * 0.5))

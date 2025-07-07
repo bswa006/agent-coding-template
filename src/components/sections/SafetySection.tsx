@@ -7,9 +7,9 @@ import {
   Zap, 
   CheckCircle,
   XCircle,
-  AlertCircle,
+
   Rocket,
-  Code,
+
   FileText
 } from 'lucide-react';
 import { RevealWrapper } from '../core';
@@ -85,7 +85,7 @@ const SafetySection: React.FC = () => {
         {/* Safety Features Grid */}
         <RevealWrapper>
           <div className="grid md:grid-cols-3 gap-4 mb-8">
-            {safetyFeatures.map((feature, index) => (
+            {safetyFeatures.map((feature) => (
               <div key={feature.title} className="bg-white border border-gray-200 rounded-lg p-3 text-center shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="mb-6">
                   <div className={`w-16 h-16 mx-auto rounded-lg flex items-center justify-center shadow-lg ${
@@ -122,7 +122,7 @@ const SafetySection: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {warningExamples.map((example, index) => (
+              {warningExamples.map((example) => (
                 <div key={example.title} className={`bg-white border border-gray-200 rounded-xl p-6 border-l-8 shadow-lg hover:shadow-xl transition-all duration-300 ${
                   example.type === 'error' 
                     ? 'border-l-red-500' 

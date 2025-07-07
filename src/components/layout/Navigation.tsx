@@ -9,11 +9,9 @@ import {
   BookOpen, 
   Rocket,
   Menu,
-  X,
-  Sparkles,
-  Code
+  X
 } from 'lucide-react';
-import { GradientText, MagneticWrapper, ScrollIndicator, IconWrapper } from '../core';
+import { MagneticWrapper, ScrollIndicator } from '../core';
 
 const Navigation: React.FC = () => {
   const [activeSection, setActiveSection] = useState('');

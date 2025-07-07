@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { 
   Target, 
-  TrendingUp, 
+ 
   Users, 
   Shield, 
   Code, 
   Clock,
   Zap,
-  Award,
+
   CheckCircle,
   BarChart3,
   Rocket,

@@ -13,8 +13,7 @@ import {
   X
 } from 'lucide-react';
 import { 
-  RevealWrapper, 
-  CodeBlock
+  RevealWrapper
 } from '../core';
 import { motion, AnimatePresence } from 'framer-motion';
 

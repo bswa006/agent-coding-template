@@ -31,7 +31,7 @@ const FloatingBadge: React.FC<FloatingBadgeProps> = ({
   visible = true,
   autoHide = false,
   autoHideDelay = 3000,
-  floating = true,
+
   magnetic = false,
   pulse = false,
   glow = false,

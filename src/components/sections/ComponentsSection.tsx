@@ -1,6 +1,6 @@
 import React from 'react';
-import { Book, FileText, Folder, CheckCircle, Zap, Code, Database, Settings } from 'lucide-react';
-import { GradientText, MagneticWrapper, RevealWrapper, IconWrapper } from '../core';
+import { FileText, Folder, CheckCircle, Zap, Code, Database, Settings } from 'lucide-react';
+import { RevealWrapper } from '../core';
 import CodeBlock from '../ui/CodeBlock';
 
 const ComponentsSection: React.FC = () => {

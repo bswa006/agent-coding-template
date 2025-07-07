@@ -10,11 +10,8 @@ import {
   Clock,
   CheckCircle,
   ArrowRight,
-  Code,
-  Terminal,
   Zap,
   Target,
-  PlayCircle,
   ExternalLink
 } from 'lucide-react';
 import { RevealWrapper } from '../core';

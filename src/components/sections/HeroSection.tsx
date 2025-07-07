@@ -1,6 +1,6 @@
 import React from 'react';
 import { Rocket, Code, BookOpen, Zap } from 'lucide-react';
-import { GradientText, MagneticWrapper, RevealWrapper, NeonButton, IconWrapper } from '../core';
+import { RevealWrapper } from '../core';
 
 const HeroSection: React.FC = () => {
   return (
