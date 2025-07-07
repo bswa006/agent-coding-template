@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--color-background)]">
       <Navigation />
-      <main>
+      <main className="mt-20">
         <HeroSection />
         <ChallengeSection />
         <FeaturesSection />

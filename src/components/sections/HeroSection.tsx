@@ -9,12 +9,7 @@ const HeroSection: React.FC = () => {
 
       <div className="container max-w-7xl mx-auto px-6">
         <div className="text-center">
-          <RevealWrapper animation="fadeIn" delay={0.2}>
-            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 text-gray-900 tracking-tight">
-              AI Agent{' '}
-              <span className="text-blue-600">Template</span>
-            </h1>
-          </RevealWrapper>
+         
 
           <RevealWrapper animation="fadeIn" delay={0.4}>
             <h2 className="text-sm md:text-base font-light mb-3 text-gray-600 max-w-2xl mx-auto">
