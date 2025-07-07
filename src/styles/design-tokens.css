@@ -1,0 +1,294 @@
+/* ===========================
+   NeoClassic Design System Tokens
+   =========================== */
+
+:root {
+  /* =========================== 
+     COLOR SYSTEM 
+     =========================== */
+  
+  /* Primary Gradients - Classic & Elegant */
+  --gradient-aurora: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  --gradient-sunset: linear-gradient(135deg, #3730A3 0%, #4C1D95 100%);
+  --gradient-ocean: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+  --gradient-purple: linear-gradient(135deg, #4C1D95 0%, #5B21B6 100%);
+  --gradient-pink: linear-gradient(135deg, #BE185D 0%, #9D174D 100%);
+  
+  /* Semantic Gradients */
+  --gradient-success: linear-gradient(135deg, #06FFA5 0%, #0BE779 100%);
+  --gradient-error: linear-gradient(135deg, #FF006E 0%, #FF4458 100%);
+  --gradient-warning: linear-gradient(135deg, #FFB800 0%, #FFA400 100%);
+  --gradient-info: linear-gradient(135deg, #00D9FF 0%, #0099FF 100%);
+  
+  /* Classic Accent Colors */
+  --accent-blue: #3730A3;
+  --accent-purple: #5B21B6;
+  --accent-pink: #BE185D;
+  --accent-green: #059669;
+  --accent-yellow: #D97706;
+  
+  /* Elegant Accent Variants */
+  --accent-primary: #5B21B6;
+  --accent-secondary: #1E3A8A;
+  --accent-success: #059669;
+  --accent-warning: #DC2626;
+  --accent-error: #DC2626;
+  
+  /* Classic Hover States */
+  --hover-primary: #6D28D9;
+  --hover-secondary: #1E40AF;
+  
+  /* Base Colors - Classic Elegant Theme */
+  --color-background: #FAFBFC;
+  --color-surface: #FFFFFF;
+  --color-surface-light: #F8F9FA;
+  --color-text: #1A1A1A;
+  --color-text-muted: #4A5568;
+  --color-text-subtle: #718096;
+  
+  /* Classic Accent Colors */
+  --color-border: #E2E8F0;
+  --color-border-light: #EDF2F7;
+  
+  /* Classic Card Styles */
+  --glass-white: rgba(255, 255, 255, 0.95);
+  --glass-white-light: rgba(255, 255, 255, 0.98);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-blur: 8px;
+  --glass-blur-heavy: 16px;
+  
+  /* Elegant Surface Colors */
+  --surface-elevated: #FFFFFF;
+  --surface-hover: #F7FAFC;
+  --surface-active: #EDF2F7;
+  
+  /* Classic Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* =========================== 
+     TYPOGRAPHY 
+     =========================== */
+  
+  /* Font Families */
+  --font-display: "Clash Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: "Satoshi", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-accent: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Type Scale - Fluid Typography */
+  --text-display-xl: clamp(3rem, 8vw, 5rem);
+  --text-display-lg: clamp(2.5rem, 6vw, 4rem);
+  --text-heading-1: clamp(2rem, 4vw, 3rem);
+  --text-heading-2: clamp(1.5rem, 3vw, 2.25rem);
+  --text-heading-3: clamp(1.25rem, 2.5vw, 1.75rem);
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-caption: 0.75rem;
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  
+  /* =========================== 
+     SPACING SYSTEM 
+     =========================== */
+  
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  
+  /* =========================== 
+     ANIMATION 
+     =========================== */
+  
+  /* Durations */
+  --duration-instant: 50ms;
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 800ms;
+  --duration-slowest: 1200ms;
+  
+  /* Easings */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  /* =========================== 
+     LAYOUT 
+     =========================== */
+  
+  /* Breakpoints */
+  --breakpoint-xs: 475px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* Container */
+  --container-max-width: 1280px;
+  --container-padding: var(--space-6);
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+  
+  /* =========================== 
+     SHADOWS & EFFECTS 
+     =========================== */
+  
+  /* Neon Glows */
+  --glow-sm: 0 0 10px;
+  --glow-md: 0 0 20px;
+  --glow-lg: 0 0 30px;
+  --glow-xl: 0 0 40px;
+  
+  /* Box Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Z-Index Scale */
+  --z-0: 0;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  --z-overlay: 100;
+  --z-modal: 200;
+  --z-tooltip: 300;
+}
+
+/* =========================== 
+   UTILITY CLASSES 
+   =========================== */
+
+/* Glassmorphism */
+.glass {
+  background: var(--glass-white);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+}
+
+.glass-heavy {
+  background: var(--glass-white-light);
+  backdrop-filter: blur(var(--glass-blur-heavy));
+  border: 1px solid var(--glass-border);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--gradient-aurora);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-animated {
+  background: var(--gradient-aurora);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Neon Glow */
+.neon-glow-blue {
+  box-shadow: var(--glow-md) var(--neon-blue);
+}
+
+.neon-glow-purple {
+  box-shadow: var(--glow-md) var(--neon-purple);
+}
+
+.neon-glow-pink {
+  box-shadow: var(--glow-md) var(--neon-pink);
+}
+
+/* Animations */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(0.95); }
+}
+
+@keyframes slide-up {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================== 
+   RESPONSIVE UTILITIES 
+   =========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode is default, but provide light mode tokens if needed */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Light mode overrides can go here */
+  }
+} 
